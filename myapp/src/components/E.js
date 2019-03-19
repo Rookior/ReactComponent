@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 const modifyPropsHOC = (WrappedComponent) => class NewComponent extends WrappedComponent{
+    static displayName = `NewComponent(${getDisplayName(WrappedComponent)})`
     componentWillMount(){
         alert('我是修改后生命周期')
     }
@@ -15,4 +16,7 @@ const modifyPropsHOC = (WrappedComponent) => class NewComponent extends WrappedC
     }
 }
 
+function getDisplayName(WrappedComponent){
+    return WrappedComponent.displayName || WrappedComponent.name || 'Component'
+}
 export default modifyPropsHOC

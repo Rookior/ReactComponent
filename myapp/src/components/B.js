@@ -9,18 +9,10 @@ class B extends Component {
             value: ''
         }
     }
-    changeInput(e){
-        this.setState(
-            {
-                value: e.target.value
-            }
-        )
-    }
     render() {
         return (
         <div>
-            <input type='text' value={this.state.value} onInput={this.changeInput.bind(this)} />
-            {this.state.value}
+            <input type='text' value={this.state.value} {...this.props}/>
             <br />
             我的名字叫：{this.props.name}
             <br />

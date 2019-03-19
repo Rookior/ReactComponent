@@ -10,7 +10,7 @@ function A(WrappedComponent){
                       <div>X</div>
                   </div>
                   <div>
-                      <WrappedComponent></WrappedComponent>
+                      <WrappedComponent sex={'男'} {...this.props}></WrappedComponent>
                   </div>
               </div>
           )

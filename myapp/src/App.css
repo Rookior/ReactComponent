@@ -8,6 +8,7 @@
   border: 2px solid #ff0000;
   display: inline-block;
   margin: 20px;
+  float: left;
 }
 .a-container .header{
   height: 50px;
